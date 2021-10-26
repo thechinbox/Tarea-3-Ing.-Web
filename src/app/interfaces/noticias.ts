@@ -9,18 +9,6 @@ export interface Noticias {
     idcategoria:number;
 }
 
-export let seleccionada = 0;
-
-export function setid(id:number){
-  seleccionada = id;
-}
-export function setdefault(){
-  seleccionada = 0;
-}
-export function getid():number{
-  return seleccionada
-}
-
 export let noticias:Array<Noticias>= [
     { "id":1,
       "imgPath":"https://as02.epimg.net/meristation/imagenes/2021/09/28/videos/1632823754_596212_1632823812_noticia_normal.jpg",

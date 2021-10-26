@@ -7,7 +7,7 @@ import { NoticiasComponent } from './noticias/noticias.component';
 const routes: Routes = [
   {path:"", component:HomeComponent},
   {path:"formulario",component:FormularioComponent},
-  {path:"noticias",component:NoticiasComponent}
+  {path:"noticias/:id",component:NoticiasComponent}
 ];
 
 @NgModule({ 

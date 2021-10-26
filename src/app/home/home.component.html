@@ -6,7 +6,7 @@
         <h2 class="card-title">{{item.title}}</h2>
         <p class="card-text">{{item.cardBody}}</p>
         <div class="d-flex justify-content-center" *ngFor="let c of categorias">
-          <a (click)="jump(item.id)" [routerLink]="'noticias'" *ngIf="c.id == item.idcategoria" class="btn btn-primary bg-{{c.color}} border-{{c.color}}">Ver Noticia </a>
+          <a [routerLink]="['/noticias',item.id]" *ngIf="c.id == item.idcategoria" class="btn btn-primary bg-{{c.color}} border-{{c.color}}">Ver Noticia </a>
         </div>  
       </div>
     </div>  
@@ -21,7 +21,7 @@
         <h2 class="card-title">{{item.title}}</h2>
         <p class="card-text">{{item.cardBody}}</p>
         <div class="d-flex justify-content-center " *ngFor="let c of categorias">
-          <a (click)="jump(item.id)" [routerLink]="'noticias'" *ngIf="c.id == item.idcategoria" class="btn btn-primary bg-{{c.color}} border-{{c.color}}">Ver Noticia </a>
+          <a [routerLink]="['/noticias',item.id]" *ngIf="c.id == item.idcategoria" class="btn btn-primary bg-{{c.color}} border-{{c.color}}">Ver Noticia </a>
         </div>  
       </div>
     </div> 

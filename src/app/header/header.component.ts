@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { setid } from '../interfaces/noticias';
 
 @Component({
   selector: 'app-header',

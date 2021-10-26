@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Noticias, noticias, getid } from '../interfaces/noticias';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Noticias, noticias } from '../interfaces/noticias';
 import { Categorias, categoriasD } from '../interfaces/categorias';
 
 @Component({
@@ -11,17 +11,19 @@ import { Categorias, categoriasD } from '../interfaces/categorias';
 export class NoticiasComponent implements OnInit {
   noticia:Noticias;
   categoria;
+  id:number = 0;
 
-  constructor(router:Router) {
-    if(getid() == 0){
-      router.navigate([''])
-    }
-    this.noticia = noticias[getid()-1];    
+  constructor(router:ActivatedRoute) {
+    router.params.subscribe(datos=>{
+      this.id = datos["id"]; 
+    })
+    this.noticia = noticias[this.id-1];    
     this.categoria = categoriasD[this.noticia.idcategoria].categoria
+    
   }
   
   ngOnInit(): void {
-
+    
   }
 
 }

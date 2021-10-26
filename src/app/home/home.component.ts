@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {Categorias, categoriasD } from '../interfaces/categorias';
-import { Noticias,noticias, setid, getid } from '../interfaces/noticias';
+import { Noticias,noticias } from '../interfaces/noticias';
 
 @Component({
   selector: 'app-home',
@@ -28,9 +28,6 @@ export class HomeComponent implements OnInit{
   }
 
   ngOnInit(): void {
-  }
-  jump(id:number):void{
-    setid(id);    
   }
 
 
