@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 > {{noticia.title}} </h1>
+        </div>
+        <div class="col-6">
+            <p>{{noticia.autor}}</p>
+        </div>
+        <div class="col-6 " >
+            <div class="row">
+                <div class="col-sm-6 col-12">
+                    <p >{{categoria}}</p>
+                </div>
+                <div class="col-sm-6 col-12">
+                    <p>{{noticia.fecha | date: 'dd/MM/yyyy'}}</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-12 mb-2">
+            <img src="{{noticia.imgPath}}">
+        </div>
+        <div class="col-12">
+            <span id="body">{{noticia.body}}</span>
+        </div>
+    </div>
+</div>

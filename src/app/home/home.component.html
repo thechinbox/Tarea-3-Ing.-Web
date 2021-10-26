@@ -1,0 +1,29 @@
+<section class="container mt-5 ms-5">
+  <div class="row ">
+    <div class="col-lg-4 col-12 card no-border my-1"  *ngFor="let item of destacados"  >
+      <img  src="{{item.imgPath}}" class="card-img-top" alt="...">
+      <div class="card-body bg-gray text-justified">
+        <h2 class="card-title">{{item.title}}</h2>
+        <p class="card-text">{{item.cardBody}}</p>
+        <div class="d-flex justify-content-center" *ngFor="let c of categorias">
+          <a (click)="jump(item.id)" [routerLink]="'noticias'" *ngIf="c.id == item.idcategoria" class="btn btn-primary bg-{{c.color}} border-{{c.color}}">Ver Noticia </a>
+        </div>  
+      </div>
+    </div>  
+  </div>       
+</section>
+
+<section class="container mt-5 ms-5">
+  <div class="row">
+    <div class="col-lg-3 col-12 card no-border my-1" *ngFor="let item of extras">
+      <img src="{{item.imgPath}}" class="card-img-top" alt="...">
+      <div class="card-body bg-gray text-justified">
+        <h2 class="card-title">{{item.title}}</h2>
+        <p class="card-text">{{item.cardBody}}</p>
+        <div class="d-flex justify-content-center " *ngFor="let c of categorias">
+          <a (click)="jump(item.id)" [routerLink]="'noticias'" *ngIf="c.id == item.idcategoria" class="btn btn-primary bg-{{c.color}} border-{{c.color}}">Ver Noticia </a>
+        </div>  
+      </div>
+    </div> 
+  </div>
+</section>

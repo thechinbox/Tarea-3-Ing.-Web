@@ -1,0 +1,75 @@
+<div  class="container ms-5 my-5 ">
+    <h3>Servicio Al Cliente </h3>
+    <form [formGroup]="formulario" (ngSubmit)="enviado()" *ngIf="estado" novalidate >
+        <div class="row" >
+            <div class="col-12"> 
+                <div class="row">
+                    <div class="col-lg-6 col-12 my-5 flex-column">
+                        <label>Nombre Completo</label>
+                        <input type="text" formControlName="nombre" placeholder="Juan Ignacio Perez Perez">
+                        <div *ngIf="formulario.controls['nombre'].invalid && (formulario.controls['nombre'].dirty || formulario.controls['nombre'].touched)" class="alert alert-danger">
+                            <div *ngIf="formulario.controls['nombre'].hasError('required')">
+                                <p>Debe ingresar Nombre Completo.</p>
+                            </div>
+                            <div *ngIf="formulario.controls['nombre'].hasError('pattern')">
+                                <p>El nombre no debe contener numeros.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-12 my-5 flex-column">
+                        <label>Correo Electronico </label>
+                        <input type="email" formControlName="correo" placeholder="ejemplo@correo.com">
+                        <div *ngIf="formulario.controls['correo'].invalid && (formulario.controls['correo'].dirty || formulario.controls['correo'].touched)" class="alert alert-danger">
+                            <div *ngIf="formulario.controls['correo'].hasError('required')" >
+                                Debe ingresar email.
+                            </div>
+                            <div *ngIf="formulario.controls['correo'].hasError('email')" >
+                                Formato Erroneo.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-12 my-5  flex-column">
+                        <label>Telefono</label>
+                        <input type="tel" minlength="9" maxlength="9" formControlName="telefono" placeholder="Ej: 985251122">
+                        <div *ngIf="formulario.controls['telefono'].invalid && (formulario.controls['telefono'].dirty || formulario.controls['telefono'].touched)" class="alert alert-danger">
+                            <div *ngIf="formulario.controls['telefono'].hasError('required') || formulario.controls['telefono'].hasError('pattern')   ">
+                                Ingresar Telefono con nueve digitos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 my-5 flex-column">
+                        <label>Dirigido a </label>
+                        <select formControlName="dirigido">
+                            <option>Contenidos</option>
+                            <option>Publicidad</option>
+                            <option>Sugerencias</option>
+                            <option>Suscripciones Digitales</option>
+                        </select>
+                        <div *ngIf="formulario.controls['dirigido'].invalid && (formulario.controls['dirigido'].dirty || formulario.controls['dirigido'].touched)" class="alert alert-danger">
+                            <div *ngIf="formulario.controls['dirigido'].hasError('required') ">
+                                Seleccione alguna de las opciones.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 flex-column">
+                        <label> Mensaje </label>
+                        <textarea formControlName="mensaje"> </textarea>
+                        <div *ngIf="formulario.controls['mensaje'].invalid && (formulario.controls['mensaje'].dirty || formulario.controls['mensaje'].touched)" class="alert alert-danger">
+                            <div *ngIf="formulario.controls['mensaje'].hasError('required') ">
+                                Ingrese el mensaje
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center my-5">
+                        <button type="submit" [disabled]="formulario.invalid" class="btn-lg"> Enviar</button>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </form>
+    <div class="row" *ngIf="!estado">
+        <div class="col d-flex justify-content-center"> <h1>Su mensaje ha sido recibido.Gracias por comunicarse con nosotros.</h1></div>
+    </div>
+</div>

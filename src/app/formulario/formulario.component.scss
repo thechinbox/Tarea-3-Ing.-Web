@@ -1,0 +1,40 @@
+.flex-column{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;  
+}
+h3{
+    font-size: xx-large;
+    font-family: 'Titillium Web', sans-serif;
+}
+textarea,input,option,select{
+    font-size: x-large;
+    font-family: 'IM Fell English SC', serif;
+}
+
+label{
+    display: flex;
+    justify-content: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: x-large;
+    font-weight: 800;
+    margin: 15px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+h3{ 
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+textarea{
+    font-size: xx-large;
+    width: 100%;
+    height: 200px;
+}
