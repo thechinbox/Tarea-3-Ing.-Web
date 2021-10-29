@@ -30,13 +30,18 @@
 .border-dark-blue{
     background-color: rgb(11, 1, 83);
 }
-
 .bg-gray{
     background-color: rgba(78, 76, 76, 0.1);
 }
+
 .no-border{
     border: none;
 }
 p{
     font-size: small;
+}
+#fondo{
+    height: 40vh;
+    width: auto;
+    background-image: url("https://s1.eestatic.com/2020/10/09/curiosidades/espana-pueblos/espana-otono-naturaleza_526959081_162161962_1706x960.jpg");
 }

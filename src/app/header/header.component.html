@@ -8,8 +8,8 @@
               <li class="nav-item mx-3 mt-1" [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']"> 
                 <a class="nav-link px-4" [routerLink]="''" (click)="isMenuCollapsed = true">Inicio</a>
               </li>
-              <li class="nav-item mx-3 mt-1" [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']">
-                <a class="nav-link px-4" (click)="isMenuCollapsed = true">Noticias</a>
+              <li class="nav-item mx-3 mt-1" [routerLinkActive]="['active']">
+                <a class="nav-link px-4" [routerLink]="'noticias'" (click)="isMenuCollapsed = true">Noticias</a>
               </li>
               <li class="nav-item mx-3 mt-1" [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['active']">
                 <a class="nav-link px-4" [routerLink]="'formulario'" (click)="isMenuCollapsed = true">Servicio al Cliente</a>
@@ -19,7 +19,6 @@
     </div>
 </nav>
 
-<div class="container-fluid mb-5" id="fondo">
-</div>
+
 
 

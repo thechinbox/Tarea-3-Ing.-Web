@@ -1,3 +1,17 @@
+//Colores Por Categoria
+.dark-red{
+    color: rgb(82, 1, 1);
+}
+.violet{
+    color: rgb(112, 0, 163);
+}
+.dark-blue{
+    color: rgb(11, 1, 83);
+}
+.gray{
+    color: rgba(78, 76, 76, 0.1);
+}
+
 img{
     width: 100%;
     height: auto;
@@ -11,6 +25,7 @@ h1{ height: 100%;
     line-height: normal;
 }
 p{
+    line-height: normal;
     font-size: xx-large;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;

@@ -18,7 +18,7 @@ export class NoticiasComponent implements OnInit {
       this.id = datos["id"]; 
     })
     this.noticia = noticias[this.id-1];    
-    this.categoria = categoriasD[this.noticia.idcategoria].categoria
+    this.categoria = categoriasD[this.noticia.idcategoria]
     
   }
   
